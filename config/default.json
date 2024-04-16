@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://url-short:url-short@urlcluster.ak2lwmx.mongodb.net/",
+    "baseUrl" : "http://localhost:5000"
+}
