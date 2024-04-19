@@ -30,8 +30,9 @@ const Result = ({ inputValue }) => {
     } catch (error) {
       console.log(error);
       setError(error);
+      
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
 
