@@ -65,6 +65,14 @@
   padding: 0.5rem 1rem;
   margin-right: 1rem;
 }
+
+.result a {
+  color: #fff;
+  border: 1px solid #f99f38;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
 .result button {
   padding: 0.5rem 1rem;
   color: #fff;
