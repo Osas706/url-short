@@ -4,6 +4,7 @@ import CopyToClipboard from "react-copy-to-clipboard";
 
 const Result = ({ inputValue }) => {
   const [shortLink, setShortLink] = useState("");
+  const [longLink, setLongLink] = useState("");
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -24,6 +25,8 @@ const Result = ({ inputValue }) => {
 
       const data = await res.json();
       setShortLink(data.shortUrl);
+      setLongLink(data.longUrl);
+
     } catch (error) {
       console.log(error);
       setError(error);
@@ -59,7 +62,8 @@ const Result = ({ inputValue }) => {
     <>
       {shortLink && (
         <div className="result">
-          <p>{shortLink}</p>
+          <a href={longLink} target="_blank">{shortLink}</a>
+          {/*<a>{shortLink}</a>*/}
 
           <CopyToClipboard text={shortLink} onCopy={() => setCopied(true)}>
             <button className={copied ? "copied" : ""}>Copy</button>
