@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+import "./App.css";
+import InputShortener from './component/InputShortener';
+import Background from './component/Background';
+import Result from './component/Result';
 
 const App = () => {
-  const [data, setData] = useState();
+  const [inputValue, setInputValue] = useState('');
 
-  const getData = async () => {
-    const response = await Axios.get("http://localhost:5000//api/url/shorten")
-  }
   return (
-    <div>
-      App
+    <div className='app'>
+      <InputShortener setInputValue={setInputValue}/>
+      <Background />
+      <Result inputValue={inputValue} />
     </div>
   )
 }
 
-export default App
+export default App;
